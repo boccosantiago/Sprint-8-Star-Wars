@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;600&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 0;
+  padding: 0;
+  font-family: 'Rajdhani', sans-serif;;
+}
+
+
+header{
+  background-color: black;
+  border-bottom: 1px solid rgb(54, 54, 54);
+  height: 90px;
+}
+
+li a{
+  text-decoration: none;
+  margin: 0 5px;
+  color: rgb(118, 118, 118);
+}
+
+li a:hover{
+  color: rgb(173, 173, 173);
+}
+
+.nav-log{
+  position: absolute;
+  display: flex;
+  list-style: none;
+  background-color: none;
+  right: 10px;
+  top: 35px;
+}
+
+.nav-links{
+  display: flex;
+  background-color: #000;
+  list-style: none;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 1px solid rgb(54, 54, 54);
+  height: 40px;
+ 
+}
+
+.nav-links li{
+  border-left: 1px solid rgb(54, 54, 54);
+  border-right: 1px solid rgb(54, 54, 54);
+  padding: 10px 10px;
+ 
+}
+
+
+.logo{
+  width: 200px;
+  filter: invert(100%);
+  margin-top: 10px;
+}
+
+.logo:hover{
+  filter: opacity(50%) invert(100%);
+}
+
+.wrapper{
+  text-align: center;
+}
+
+.main-container {
+  background-color: #000;
+  color: rgb(86, 86, 86);
+}
+
+.ship-container{
+  width: 80%;
+  margin: 20px auto 0 auto;
+  padding: 15px 30px;
+  background-color: rgb(32, 32, 32);
+}
+
+.name{
+  font-size: 1.3em;
+  font-weight: 600;
+  padding-bottom: 10px;
+  text-decoration: none;
+  color: rgb(130, 130, 130);
+}
+.model{
+  font-size: 0.95em;
+}
+
+
