@@ -1,0 +1,65 @@
+.info-main{
+    display: block;
+    text-align: center;
+    background-color: black; 
+    width: 50%;
+    margin: auto;
+  }
+  
+  
+  
+  .starship-img{
+    border-bottom: 2px solid rgb(255, 82, 82);
+    margin-top: 20px;
+    max-width:100%;
+    max-height:100%;
+  }
+  
+  .starship-div{
+    text-align: justify;
+    margin: 20px;
+    font-size: 2.5em;
+    font-weight: 500;
+  }
+  
+  .info-text{
+    width: 50%;
+  }
+  
+  .row{
+    display: flex;
+  }
+  
+  .column1{
+    background-color: black;
+    text-align:left;
+    font-size: 1.2em;
+    font-weight: 500;
+    width: 60%;
+    margin-right: 10px;
+  }
+  
+  .column2{
+    background-color: black;
+    text-align:left;
+    font-size: 1.2em;
+    font-weight: 500;
+    float: right;
+    
+  }
+  
+  .name-div{
+    margin: 20px 0;
+    font-size: 2em;
+    text-align: left;
+    color: rgb(179, 179, 179);
+  }
+  
+  /* .description{
+    text-align: left;
+    font-size: 1.2em;
+    font-weight: 500;
+    padding-bottom: 20px;
+    color: rgb(100, 100, 100);
+  } */
+  
