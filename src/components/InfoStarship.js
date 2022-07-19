@@ -67,7 +67,7 @@ export default function InfoStarship() {
             </div>
           </div>
         </div>
-      ) : ("CARGANDO...")}
+      ) : ("LOADING...")}
     </div>
   );
 }

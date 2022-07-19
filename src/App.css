@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap');
 
 *{
   box-sizing: border-box;
@@ -92,15 +92,9 @@ li a:hover{
 }
 .ship-container{
   width: 80%;
-  margin: 20px auto 0 auto;
+  margin: 20px auto 20px auto;
   padding: 15px 30px;
   background-color: rgb(32, 32, 32);
-}
-
-.ship-container span{
-
-  padding: 15px
-
 }
 
 .name{
@@ -113,4 +107,14 @@ li a:hover{
 .model{
   font-size: 1.2em;
   font-weight: 500;
+}
+
+.buttons{
+  text-align: center;
+}
+
+.buttons button{
+  width: 100px;
+  margin: 20px;
+  cursor: pointer;
 }

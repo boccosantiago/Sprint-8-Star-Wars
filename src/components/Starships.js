@@ -4,19 +4,32 @@ import axios from "axios";
 
 export default function Starships() {
   const [starshipsData, setStarshipsData] = useState([]);
+  const [load, setLoad] = useState(1)
+
 
   useEffect(() => {
-    axios.get("https://swapi.dev/api/starships/").then((res) => {
+    axios.get(`https://swapi.dev/api/starships/?page=${load}`)
+         .then((res) => {
       console.log("data", res.data.results);
-      setStarshipsData(res.data.results);
+      setStarshipsData(prevStarshipsData => [...prevStarshipsData, ...res.data.results]);
     });
-  }, []);
+  }, [load]);
 
-  const starshipsList = starshipsData.map((data) => {
+  
+ 
+
+  function loadMore(){
+    setLoad((prevLoad) => prevLoad + 1)
+  }
+
+  console.log('load', load)
+  console.log('starshipsData', starshipsData)
+
+  const starshipsList = starshipsData.map((data, index) => {
     const last = data.url.split("/");
     const id = last[last.length - 2];
     return (
-      <div key={data.name} className="ship-container">
+      <div key={index} className="ship-container">
         <a href={`/starships/${id}`} className="name">
           {data.name}
         </a>
@@ -25,9 +38,17 @@ export default function Starships() {
     );
   });
 
+
+
   return (
+    <div>
     <div className="starship-container">
-      {starshipsData !== [] ? starshipsList : "CARGANDO..."}
+      {starshipsData !== [] ? starshipsList : "LOADING..."}
+      
+    </div>
+    <div className="buttons">
+    {load < 4 ? <button onClick={loadMore}>Load More...</button> : ""}
+    </div>
     </div>
   );
 }
