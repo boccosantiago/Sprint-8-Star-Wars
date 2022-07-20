@@ -4,6 +4,7 @@
     background-color: black; 
     width: 50%;
     margin: auto;
+    max-width: 700px;
   }
   
   
@@ -28,21 +29,20 @@
   
   .row{
     display: flex;
+    font-size: 1.2em;
+    color: #999;
+
   }
   
   .column1{
-    background-color: black;
     text-align:left;
-    font-size: 1.2em;
     font-weight: 500;
     width: 60%;
     margin-right: 10px;
   }
   
   .column2{
-    background-color: black;
     text-align:left;
-    font-size: 1.2em;
     font-weight: 500;
     float: right;
     
@@ -52,7 +52,7 @@
     margin: 20px 0;
     font-size: 2em;
     text-align: left;
-    color: rgb(179, 179, 179);
+    color: #999;
   }
   
   /* .description{

@@ -1,14 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 *{
   box-sizing: border-box;
   margin: 0;
   margin-bottom: 0;
   padding: 0;
   font-family: 'Rajdhani', sans-serif;
-  font-size: 1em;
-  
-  
 }
 
 html{
@@ -19,7 +16,7 @@ html{
 header{
   background-color: black;
   border-bottom: 1px solid rgb(54, 54, 54);
-  height: 90px;
+ 
 }
 
 .home-container{
@@ -31,10 +28,14 @@ li a{
   text-decoration: none;
   margin: 0 5px;
   color: rgb(118, 118, 118);
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8em;
+  transition: all .2s ease-in-out;
 }
 
 li a:hover{
-  color: rgb(173, 173, 173);
+  color: rgb(255, 255, 255);
+  
 }
 
 .nav-log{
@@ -43,9 +44,10 @@ li a:hover{
   list-style: none;
   background-color: none;
   right: 10px;
-  top: 35px;
+  top: 55px;
   font-size: 1.3em;
-  font-weight: 500;
+  font-weight: 600;
+  
 }
 
 .nav-links{
@@ -55,7 +57,7 @@ li a:hover{
   justify-content: center;
   width: 100%;
   border-bottom: 1px solid rgb(54, 54, 54);
-  height: 50px;
+  height: 45px;
   font-size: 1.3em;
   font-weight: 500;
 }
@@ -70,15 +72,14 @@ li a:hover{
 
 .logo{
   width: 200px;
-  filter: invert(100%);
-  margin-top: 10px;
+  margin: 20px 0
 }
 
 .logo:hover{
-  filter: opacity(50%) invert(100%);
+  cursor: pointer;
 }
 
-.wrapper{
+.nav-wrapper{
   text-align: center;
 }
 
@@ -95,6 +96,12 @@ li a:hover{
   margin: 20px auto 20px auto;
   padding: 15px 30px;
   background-color: rgb(32, 32, 32);
+  transition: transform .2s;
+}
+
+.ship-container:hover{
+  transform: scale(1.03);
+  cursor: pointer;
 }
 
 .name{
@@ -102,8 +109,16 @@ li a:hover{
   font-weight: 600;
   padding-bottom: 10px;
   text-decoration: none;
-  color: rgb(130, 130, 130);
+  color: rgb(167, 167, 167);
+  transition: all .2s ease-in-out;
 }
+
+
+.name:hover{
+  color: white;
+}
+
+
 .model{
   font-size: 1.2em;
   font-weight: 500;

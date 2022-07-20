@@ -1,16 +1,17 @@
 import React from "react";
-import logo from '../img/star-wars.svg'
+import logo from '../img/star-wars.png'
 
 export default function Header(){
 
     return(
         <div>
         <header>
-        <div className='wrapper'>
+        <div className='nav-wrapper'>
         <img className='logo' alt='logo' src={logo}/>
         </div>
           <ul className='nav-log'>
           <li><a href='/login'>LOG IN</a></li>
+          <li>{'//'}</li>
           <li><a href='/signin'>SIGN IN</a></li>
           </ul>
       </header>
