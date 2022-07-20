@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/App.css';
 import Starships from './components/Starships';
 import Header from './components/Header';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -7,6 +7,7 @@ import InfoStarship from './components/InfoStarship';
 
 
 function App() {
+  console.log("render App")
 
   return (
     <div className='main-container'>

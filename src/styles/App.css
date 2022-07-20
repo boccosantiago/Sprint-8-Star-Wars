@@ -13,82 +13,14 @@ html{
 }
 
 
-header{
-  background-color: black;
-  border-bottom: 1px solid rgb(54, 54, 54);
- 
-}
-
-.home-container{
-  text-align: center;
-  height: 90vh;
-}
-
-li a{
-  text-decoration: none;
-  margin: 0 5px;
-  color: rgb(118, 118, 118);
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.8em;
-  transition: all .2s ease-in-out;
-}
-
-li a:hover{
-  color: rgb(255, 255, 255);
-  
-}
-
-.nav-log{
-  position: absolute;
-  display: flex;
-  list-style: none;
-  background-color: none;
-  right: 10px;
-  top: 55px;
-  font-size: 1.3em;
-  font-weight: 600;
-  
-}
-
-.nav-links{
-  display: flex;
-  background-color: #000;
-  list-style: none;
-  justify-content: center;
-  width: 100%;
-  border-bottom: 1px solid rgb(54, 54, 54);
-  height: 45px;
-  font-size: 1.3em;
-  font-weight: 500;
-}
-
-.nav-links li{
-  border-left: 1px solid rgb(54, 54, 54);
-  border-right: 1px solid rgb(54, 54, 54);
-  padding: 10px 10px;
- 
-}
-
-
-.logo{
-  width: 200px;
-  margin: 20px 0
-}
-
-.logo:hover{
-  cursor: pointer;
-}
-
-.nav-wrapper{
-  text-align: center;
-}
-
 .main-container {
   background-color: #000;
   color: rgb(86, 86, 86);
+  margin-top: 170px;
 }
 .starship-container{
   background-color: black; 
+  margin-top: 190px;
 
 }
 .ship-container{
@@ -132,4 +64,13 @@ li a:hover{
   width: 100px;
   margin: 20px;
   cursor: pointer;
+  background-color: rgb(172, 172, 172);
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.buttons button:hover{
+  background-color: gray;
 }

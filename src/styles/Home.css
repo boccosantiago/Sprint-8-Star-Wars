@@ -1,0 +1,39 @@
+.home-texts{
+    margin-bottom: 0px;
+  }
+
+  .p-text{
+    margin: 10px auto;
+    width: 50%;
+    text-align:justify;
+    font-weight: 600;
+    color: rgb(161, 161, 161);
+
+  }
+
+  footer{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    height: 3rem; 
+    text-align: center;
+    color: rgb(164, 164, 164); ;
+  }
+
+.footer-links{
+  font-size: 2em;
+}
+
+.footer-text{
+  font-family: Roboto, sans-serif;
+  font-size: 0.9em;
+}
+
+.link{
+    color: rgb(164, 164, 164);
+    transition: all .2s ease-in-out;
+}
+
+.link:hover{
+    color: rgb(255, 255, 255); ;
+}

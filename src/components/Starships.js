@@ -21,8 +21,6 @@ export default function Starships() {
   function loadMore(){
     setLoad((prevLoad) => prevLoad + 1)
   }
-
-  console.log('load', load)
   console.log('starshipsData', starshipsData)
 
   const starshipsList = starshipsData.map((data, index) => {

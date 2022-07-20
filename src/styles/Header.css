@@ -1,0 +1,88 @@
+header{
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+  
+  header nav{
+    border-top: 1px solid rgb(54, 54, 54);
+    display: flex;
+  }
+  
+  
+  li a{
+    text-decoration: none;
+    margin: 0 5px;
+    color: rgb(118, 118, 118);
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+    transition: all .2s ease-in-out;
+  }
+  
+  li a:hover{
+    color: rgb(255, 255, 255);
+    
+  }
+  
+  .nav-log{
+    display: flex;
+    list-style: none;
+    background-color: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: auto 0;
+    
+  }
+  
+  .nav-links{
+    display: flex;
+    background-color: #000;
+    list-style: none;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid rgb(54, 54, 54);
+    height: 45px;
+    font-size: 1.2em;
+    font-weight: 500;
+  }
+  
+  .nav-links li{
+    border-left: 1px solid rgb(54, 54, 54);
+    border-right: 1px solid rgb(54, 54, 54);
+    padding: 10px 10px;
+   
+  }
+  
+  
+  .logo{
+    width: 200px;
+    margin: 20px 0
+  }
+  
+  .logo:hover{
+    cursor: pointer;
+  }
+  
+  .nav-wrapper{
+    display: flex;
+    justify-content:space-between;
+  }
+
+.links{
+    align-items: flex-start;
+    margin: 15px 15px 10px 20px;
+    font-size: 1.5em;
+    text-align: center;
+    color: rgb(164, 164, 164); ;
+  }
+
+.link{
+    color: rgb(164, 164, 164);
+    transition: all .2s ease-in-out;
+}
+
+.link:hover{
+    color: rgb(255, 255, 255); ;
+}

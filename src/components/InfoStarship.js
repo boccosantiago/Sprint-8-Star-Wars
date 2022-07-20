@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import './InfoStarship.css'
+import '../styles/InfoStarship.css'
 
 export default function InfoStarship() {
   const [starship, setStarship] = useState(null);
