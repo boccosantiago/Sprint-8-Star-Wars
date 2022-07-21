@@ -1,5 +1,6 @@
+
 .home-texts{
-    margin-bottom: 0px;
+    margin: 50px 0;
   }
 
   .p-text{
@@ -12,10 +13,8 @@
   }
 
   footer{
-    position: absolute;
-    bottom: 20px;
     width: 100%;
-    height: 3rem; 
+    margin-bottom: 10px;
     text-align: center;
     color: rgb(164, 164, 164); ;
   }
@@ -36,4 +35,49 @@
 
 .link:hover{
     color: rgb(255, 255, 255); ;
+}
+
+
+@media (max-width: 900px) {
+  .p-text{
+    position: absolute;
+    bottom: 0px;
+    margin: auto;
+    width: 80%;
+    left: 10%;
+  }
+  footer{
+    position: absolute;
+    bottom: -150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .p-text{
+    position: absolute;
+    bottom: -10%;
+    margin: auto;
+    width: 80%;
+    left: 10%;
+  }
+  footer{
+    position: absolute;
+    bottom: -150px;
+  }
+}
+
+
+@media (max-width: 550px) {
+  .p-text{
+    position: relative;
+    bottom: -50px;
+    width: 90%;
+    left: 0;
+  }
+  footer{
+    position: relative;
+    bottom: -90px;
+    font-size: 0.8em;
+  }
+
 }

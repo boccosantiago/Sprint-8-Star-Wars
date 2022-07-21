@@ -64,13 +64,20 @@ html{
   width: 100px;
   margin: 20px;
   cursor: pointer;
-  background-color: rgb(172, 172, 172);
+  background-color: rgb(71, 71, 71);
   border-radius: 5px;
   padding: 5px;
   font-weight: 600;
-  font-size: 1em;
+  font-size: .9em;
+  color: white;
 }
 
 .buttons button:hover{
-  background-color: gray;
+  background-color: rgb(102, 102, 102);
+}
+
+@media (max-width: 550px) {
+  .buttons button{
+    margin-top: 50px;
+}
 }

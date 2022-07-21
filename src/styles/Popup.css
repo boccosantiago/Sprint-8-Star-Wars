@@ -1,0 +1,109 @@
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.285);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.popup-inner {
+    position: relative;
+    padding: 32px;
+    width: 80%;
+    max-width: 640px;
+    text-align: center;
+    background-color: rgb(48, 48, 48);
+    border-radius: 10px;
+}
+
+.popup-inner h2{
+    color: rgb(255, 242, 0);
+    font-weight: 500;
+    font-size: 2em;
+}
+
+.popup-inner label{
+    color: rgb(255, 242, 0);
+   
+}
+
+.inputs{
+  justify-content: center; 
+}
+
+.form{
+    text-align: center; 
+  }
+
+.inputs div{
+    width: 100%;
+    text-align: center;
+    margin: auto 0;
+    text-align: left;
+    
+}
+
+.sub-btn{
+    width: 200px;
+    background-color: gray;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    padding: 5px;
+    border: none;
+    font-size: 1em;
+    
+}
+
+.sub-btn:hover{
+    background-color: rgb(82, 82, 190);
+}
+
+
+.popup-inner input{
+    background-color: rgb(74, 74, 74);
+    color: white;
+    font-size: large;
+    padding: 5px;
+    border: none;
+    width: 100%;
+}
+
+.error{
+    color: red;
+    font-size: 0.8em;
+}
+
+.btn-x{
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.btn-x:hover{
+    cursor: pointer;
+    z-index: 10;
+    color: white;
+   
+}
+
+.success{
+    color: rgb(0, 174, 0);
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.fail{
+    color: rgb(174, 0, 0);
+    font-size: 1.5em;
+    margin-top: 20px;
+}

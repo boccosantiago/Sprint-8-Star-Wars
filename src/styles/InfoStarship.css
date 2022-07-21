@@ -8,7 +8,7 @@
   }
   
   
-  
+
   .starship-img{
     border-bottom: 2px solid rgb(255, 82, 82);
     margin-top: 20px;
@@ -23,9 +23,9 @@
     font-weight: 500;
   }
   
-  .info-text{
+/*   .info-text{
     width: 50%;
-  }
+  } */
   
   .row{
     display: flex;
@@ -63,3 +63,38 @@
     color: rgb(100, 100, 100);
   } */
   
+
+  @media (max-width: 900px) {
+
+    .info-main{
+      width: 90%;
+      position: relative;
+      top: 50px
+    }
+
+    .row{
+      display: block;
+    }
+
+    .column1{
+      text-align: left;
+      font-weight: 500;
+      width: 90%;
+      margin-right: 0px;
+    }
+    
+    .column2{
+      width: 90%;
+      text-align:left;
+      float:none;
+    }
+
+  }
+
+  @media (max-width: 550px) {
+    .starship-container{
+      position: relative;
+      top: 50px;
+    }
+
+  }
