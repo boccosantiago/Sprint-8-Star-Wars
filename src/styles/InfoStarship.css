@@ -54,6 +54,10 @@
     text-align: left;
     color: #999;
   }
+
+  .model{
+    color: rgb(94, 94, 94);
+  }
   
   /* .description{
     text-align: left;

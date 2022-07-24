@@ -7,11 +7,18 @@ import { Link } from "react-router-dom";
 export default function Header(props) {
   // console.log('header props', props.newUsers )
 
-  const getName = props.newUsers.filter(
+/*   function getName(){
+    let firstName
+   if(firstName !== undefined){
+  const name = props.newUsers.filter(
     (item) =>
       item.email === props.loginValues.email &&
       item.password === props.loginValues.password
-  );
+  ); 
+    return name[0].firstName
+}} */
+
+
   
 
   // console.log('userName', userName.firstName)
@@ -59,11 +66,11 @@ export default function Header(props) {
           <div className="nav-log">
             <ul>
               <li>
-                <p>Hi, {getName[0].firstName}</p>
+                <p>Welcome</p>
               </li>
               <li>{"//"}</li>
               <li>
-                <button onClick={() => props.logOut()}>SIGN OUT</button>
+                <button onClick={()=>props.setUserLogin(false)}>SIGN OUT</button>
               </li>
             </ul>
           </div>

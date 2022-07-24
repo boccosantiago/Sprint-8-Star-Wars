@@ -12,7 +12,7 @@ export default function Starships() {
   useEffect(() => {
     axios.get(`https://swapi.dev/api/starships/?page=${load}`)
          .then((res) => {
-      console.log("data", res.data.results);
+      //console.log("data", res.data.results);
       setStarshipsData(prevStarshipsData => [...prevStarshipsData, ...res.data.results]);
     });
   }, [load]);
@@ -23,7 +23,7 @@ export default function Starships() {
   function loadMore(){
     setLoad((prevLoad) => prevLoad + 1)
   }
-  console.log('starshipsData', starshipsData)
+  //console.log('starshipsData', starshipsData)
 
   const starshipsList = starshipsData.map((data, index) => {
     const last = data.url.split("/");
@@ -34,8 +34,9 @@ export default function Starships() {
         <p className="name">
           {data.name}
         </p>
-        </Link>
+        
         <div className="model">{data.model}</div>
+        </Link>
       </div>
     );
   });

@@ -2,14 +2,14 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import '../styles/InfoStarship.css'
+import "../styles/InfoStarship.css";
+import Pilots from "./Pilots";
+import "../styles/PilotCards.css";
+
 
 export default function InfoStarship() {
   const [starship, setStarship] = useState(null);
-
   const params = useParams();
-
-  // console.log('params', params)
 
   function uniqueStarship(id) {
     axios
@@ -40,7 +40,6 @@ export default function InfoStarship() {
             <p>{starship.name}</p>
           </div>
           <div className="row">
-            
             <div className="column1">
               <p>Model: {starship.model}</p>
               <br />
@@ -63,11 +62,20 @@ export default function InfoStarship() {
               <p>Crew: {starship.crew}</p>
               <br />
               <p>Passengers: {starship.passengers}</p>
-              <br />
+            </div>
+          </div>
+          <div className="pilot-container">
+            <h2>Related Pilots:</h2>
+            <div className="pilot">
+              {starship.pilots.map((url) => (
+                <Pilots key={url} url={url} />
+              ))}
             </div>
           </div>
         </div>
-      ) : ("LOADING...")}
+      ) : (
+        "LOADING..."
+      )}
     </div>
   );
 }

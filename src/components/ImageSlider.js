@@ -37,6 +37,7 @@ export default function ImageSlider({ slides }) {
   }
 
   return (
+    <div className="container-slider">
     <section className="slider">
       <FaArrowLeft className="left-arrow" onClick={prevSlide} />
       <FaArrowRight className="right-arrow" onClick={nextSlide} />
@@ -53,5 +54,6 @@ export default function ImageSlider({ slides }) {
         );
       })}
     </section>
+    </div>
   );
 }

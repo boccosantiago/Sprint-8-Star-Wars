@@ -1,0 +1,37 @@
+.pilot-container{
+    width: 35%;
+  
+    text-align: left;
+    
+}
+
+.pilot-container h2{
+
+  color: yellow;
+  font-weight: 300;
+    
+}
+
+.pilot-card{
+  
+    padding: 10px;
+    text-align: left;
+    margin: auto;
+    font-size: 1em;
+    color: white;
+}
+.pilot{
+    display:grid;
+    margin: 10px;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: 50% 50%;
+    grid-auto-columns: fit-content;
+    width: 120%;
+    
+    
+}
+.pilot-img{
+    width: 100%;
+
+
+}
