@@ -1,6 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import {Link} from 'react-router-dom';
+
 
 export default function Starships() {
   const [starshipsData, setStarshipsData] = useState([]);
@@ -28,9 +30,11 @@ export default function Starships() {
     const id = last[last.length - 2];
     return (
       <div key={index} className="ship-container">
-        <a href={`/starships/${id}`} className="name">
+        <Link to={`/starships/${id}`}>
+        <p className="name">
           {data.name}
-        </a>
+        </p>
+        </Link>
         <div className="model">{data.model}</div>
       </div>
     );

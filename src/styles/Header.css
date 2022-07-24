@@ -45,6 +45,11 @@ header{
   }
   
   .nav-log{
+    margin: auto 0;
+    
+  }
+
+  .nav-log ul{
     display: flex;
     list-style: none;
     background-color: none;
@@ -52,6 +57,12 @@ header{
     font-weight: 500;
     margin: auto 0;
     
+  }
+
+  .nav-log p{
+    color: rgb(142, 140, 140);
+    font-weight: 500;
+    padding-right: 5px;
   }
   
   .nav-links{
@@ -130,7 +141,7 @@ header{
     margin: 0 0 10px 0;
   }
 
-  .nav-log{
+  .nav-log ul{
     justify-content: center;
     
   }

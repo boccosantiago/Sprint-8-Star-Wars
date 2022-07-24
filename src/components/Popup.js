@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../styles/Popup.css";
 import validation from "./validation";
 import { CgClose } from "react-icons/cg";
-import {BsCheck2Circle} from "react-icons/bs"
+import { BsCheck2Circle } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 function Popup(props) {
+  console.log("props popup", props);
   const [values, setValues] = useState({
     firstName: "",
     lastName: "",
@@ -16,35 +18,17 @@ function Popup(props) {
   const [isLogged, setIsLogged] = useState(null);
   const [errors, setErrors] = useState({});
 
-  const [newUsers, setNewUsers] = useState(() => {
-    const initial = [];
-    try {
-      const data = localStorage.getItem("registeredUsers");
-      return data ? JSON.parse(data) : initial
-    } catch (e) {
-      return initial
-    }
-  });
-
-  useEffect(() => {
-    localStorage.setItem("registeredUsers", JSON.stringify(newUsers));
-  }, [newUsers])
-
   
 
-
-  function addNewUser(){
-
+  function addNewUser() {
     const user = {
       firstName: values.firstName,
       lastName: values.lastName,
       email: values.email,
       password: values.password,
-    }
-    setNewUsers([...newUsers, user]);
+    };
+    props.setNewUsers([...props.newUsers, user]);
   }
-
-
 
   function handleRegister(event) {
     setErrors(validation(values));
@@ -56,7 +40,7 @@ function Popup(props) {
       event.preventDefault();
       setRegister(true);
       addNewUser();
-      setTimeout(()=> defaultValues(), 3000);
+      setTimeout(() => defaultValues(), 3000);
     }
   }
 
@@ -68,67 +52,67 @@ function Popup(props) {
     });
   }
 
+  
 
-
-  const [loginValues, setLoginValues] = useState({
-    email: "",
-    password: "",
-  });
+  
 
 
   function handleLogin(e) {
     e.preventDefault();
-
-      const correct = newUsers.filter((item) =>item.email === loginValues.email &&
-          item.password === loginValues.password);
-   
-      console.log("Correct", correct);
-      if (correct.length !== 0) {
-        console.log("ok");
-        setIsLogged(true);
-        setTimeout(()=> defaultValues(), 3000);
-      } else {
-        console.log("NOT OK");
-        setIsLogged(false);
-      }
-    
+    const correct = props.newUsers.filter(
+      (item) =>
+        item.email === props.loginValues.email &&
+        item.password === props.loginValues.password
+    );
+    if (correct.length !== 0) {
+      console.log("OK");
+      props.logIn();
+      setIsLogged(true);
+      setTimeout(() => defaultValues(), 3000);
+    } else {
+      console.log("NOT OK");
+      setIsLogged(false);
+    }
   }
 
   function handleChangeLogin(event) {
     const { name, value } = event.target;
-    setLoginValues({
-      ...loginValues,
+    props.setLoginValues({
+      ...props.loginValues,
       [name]: value,
     });
   }
 
-  function defaultValues(){
-    setIsLogged(null)
-    setRegister(false)
-    props.setTriggerLogin(false)
-    props.setTriggerSignin(false)
-    setValues({
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-    })
+  const navigate = useNavigate();
+
+  console.log("isloggedin", props.isLoggedIn);
+
+  function defaultValues() {
+    setIsLogged(null);
+    setRegister(false);
+    props.setTriggerLogin(false);
+    props.setTriggerSignin(false);
+    /* setValues({
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+    });
     setLoginValues({
-    email: "",
-    password: "",
-    })
+      email: "",
+      password: "",
+    }); */
+
+    navigate("/");
   }
 
-  console.log("prueba", loginValues);
+  console.log('loginValues', props.loginValues);
 
   if (props.triggerLogin) {
     return (
       <div className="popup">
         <div className="popup-inner">
-          <CgClose
-            onClick={() => defaultValues()}
-            className="btn-x"
-          />
+          <CgClose onClick={() => defaultValues()} className="btn-x" />
           <div className="inputs">
             <h2>Welcome Back!</h2>
             <form className="form">
@@ -137,7 +121,7 @@ function Popup(props) {
                 <br />
                 <input
                   onChange={handleChangeLogin}
-                  value={loginValues.email}
+                  value={props.loginValues.email}
                   type="email"
                   name="email"
                   required
@@ -148,7 +132,7 @@ function Popup(props) {
                 <br />
                 <input
                   onChange={handleChangeLogin}
-                  value={loginValues.password}
+                  value={props.loginValues.password}
                   type="password"
                   name="password"
                   required
@@ -160,10 +144,14 @@ function Popup(props) {
                 Login
               </button>
               {isLogged ? (
-                <p className="success">You are now logged in <BsCheck2Circle/> </p>
+                <p className="success">
+                  You are now logged in <BsCheck2Circle />{" "}
+                </p>
               ) : isLogged === false ? (
-                <p className="fail">You are not registered</p> 
-              ) : ''}
+                <p className="fail">You are not registered</p>
+              ) : (
+                ""
+              )}
             </form>
           </div>
         </div>
@@ -174,10 +162,7 @@ function Popup(props) {
     return (
       <div className="popup">
         <div className="popup-inner">
-          <CgClose
-            onClick={() => defaultValues()}
-            className="btn-x"
-          />
+          <CgClose onClick={() => defaultValues()} className="btn-x" />
           <div className="inputs">
             <h2>CREATE YOUR ACCOUNT</h2>
             <form className="form-register-container">
@@ -240,7 +225,10 @@ function Popup(props) {
                 Create Account
               </button>
               {register ? (
-                <p className="success"> Registration Successful! <BsCheck2Circle/> </p>
+                <p className="success">
+                  {" "}
+                  Registration Successful! <BsCheck2Circle />{" "}
+                </p>
               ) : (
                 ""
               )}

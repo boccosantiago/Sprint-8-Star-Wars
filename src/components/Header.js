@@ -2,12 +2,19 @@ import React from "react";
 import logo from "../img/star-wars.png";
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 import "../styles/Header.css";
-import {Link} from 'react-router-dom';
-
+import { Link } from "react-router-dom";
 
 export default function Header(props) {
-  console.log('header rendering')
+  // console.log('header props', props.newUsers )
+
+  const getName = props.newUsers.filter(
+    (item) =>
+      item.email === props.loginValues.email &&
+      item.password === props.loginValues.password
+  );
   
+
+  // console.log('userName', userName.firstName)
 
   return (
     <header>
@@ -32,24 +39,40 @@ export default function Header(props) {
 
         <img className="logo" alt="logo" src={logo} />
 
-        <ul className="nav-log">
-          <li>
-            <button onClick={() => props.setPopupLogin(true)}>
-              LOG IN
-            </button>
-          </li>
-          <li>{"//"}</li>
-          <li>
-            <button onClick={() => props.setPopupSignin(true)}>
-              SIGN IN
-            </button>
-          </li>
-        </ul>
+        {!props.isLoggedIn ? (
+          <div className="nav-log">
+            <ul>
+              <li>
+                <button onClick={() => props.setPopupLogin(true)}>
+                  LOG IN
+                </button>
+              </li>
+              <li>{"//"}</li>
+              <li>
+                <button onClick={() => props.setPopupSignin(true)}>
+                  SIGN IN
+                </button>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <div className="nav-log">
+            <ul>
+              <li>
+                <p>Hi, {getName[0].firstName}</p>
+              </li>
+              <li>{"//"}</li>
+              <li>
+                <button onClick={() => props.logOut()}>SIGN OUT</button>
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
       <nav>
         <ul className="nav-links">
           <li>
-          <Link to="/">HOME</Link>
+            <Link to="/">HOME</Link>
           </li>
           <li>
             <Link to="/starships">STARSHIPS</Link>

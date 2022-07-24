@@ -4,7 +4,7 @@ export default function validation(values){
     
     let errors = {}
     let nameRegex = /^[a-zA-Z]+$/
-    let passwordRegex = /^[a-zA-Z]+$/
+    let passwordRegex = /^[a-zA-Z0-9]+$/
     //let passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/
     let emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/
 
