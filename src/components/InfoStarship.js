@@ -4,7 +4,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "../styles/InfoStarship.css";
 import Pilots from "./Pilots";
-import "../styles/PilotCards.css";
+import Films from "./Films";
+import "../styles/Pilots.css";
+import "../styles/Films.css";
 
 
 export default function InfoStarship() {
@@ -21,6 +23,7 @@ export default function InfoStarship() {
     uniqueStarship(params.id);
   }, [params.id]);
 
+  console.log(starship)
   return (
     <div>
       {starship !== null ? (
@@ -64,17 +67,25 @@ export default function InfoStarship() {
               <p>Passengers: {starship.passengers}</p>
             </div>
           </div>
-          <div className="pilot-container">
-            <h2>Related Pilots:</h2>
-            <div className="pilot">
+            {starship.pilots.length !== 0 && <div className="pilots-container">
+              <h2>Related Pilots:</h2>
+            <div className="pilots">
               {starship.pilots.map((url) => (
                 <Pilots key={url} url={url} />
+              ))}
+            </div>
+          </div>}
+          <div className="films-container">
+              <h2>Films:</h2>
+            <div className="films">
+              {starship.films.map((url) => (
+                <Films key={url} url={url} />
               ))}
             </div>
           </div>
         </div>
       ) : (
-        "LOADING..."
+        <p className="loading">LOADING...</p>
       )}
     </div>
   );

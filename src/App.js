@@ -21,7 +21,7 @@ function App() {
   const [userLogin, setUserLogin] = useState(() => {
     const initial = false;
     try {
-      const data = localStorage.getItem("registeredUsers");
+      const data = localStorage.getItem("userLogin");
       return data ? JSON.parse(data) : initial;
     } catch (e) {
       return initial;
@@ -57,7 +57,7 @@ function App() {
 
   const isLoggedIn = (userLogin) ? true : false
   
-
+console.log('USERLOGIN', userLogin)
 
   return (
     <div className="main-container">
@@ -70,6 +70,7 @@ function App() {
           loginValues={loginValues}
           setLoginValues={setLoginValues}
           setUserLogin={setUserLogin}
+          userLogin={userLogin}
         />
         <Popup
           triggerLogin={popupLogin}
@@ -87,7 +88,7 @@ function App() {
           <Route path='/' element={<Home />}/>
           <Route path="unauthorized" element={<Unauthorized />}/>
           <Route path="starships" 
-          element={ <Protected  isLoggedIn={isLoggedIn}>  */
+          element={ <Protected  isLoggedIn={isLoggedIn}>
           {<Starships />}
           </Protected>} 
           />

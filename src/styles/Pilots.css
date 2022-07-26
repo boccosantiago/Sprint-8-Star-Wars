@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+.pilots-container{
+    width: 100%;
+    text-align: left;
+     margin-top: 20px;
+}
+
+.pilots-container h2{
+  color: yellow;
+  font-weight: 300;
+ 
+    
+}
+
+.pilots-card{
+    padding: 10px;
+    font-size: 1em;
+    color: rgb(191, 191, 191);
+}
+
+.pilots{
+    text-align: center;
+    display:grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+    
+.pilots p{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(180, 180, 180);
+
+}
+    
+
+.pilot-img{
+    width: 95%;
+    clip-path: circle();
+
+
+}

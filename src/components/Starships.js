@@ -46,8 +46,7 @@ export default function Starships() {
   return (
     <div>
     <div className="starship-container">
-      {starshipsData !== [] ? starshipsList : "LOADING..."}
-      
+      {starshipsData !== [] ? starshipsList : <p className="loading">LOADING...</p>}
     </div>
     <div className="buttons">
     {load < 4 ? <button onClick={loadMore}>Load More...</button> : ""}

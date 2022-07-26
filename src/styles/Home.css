@@ -38,46 +38,35 @@
 }
 
 
+
+
 @media (max-width: 900px) {
   .p-text{
-    position: absolute;
-    bottom: 0px;
     margin: auto;
     width: 80%;
-    left: 10%;
   }
-  footer{
-    position: absolute;
-    bottom: -150px;
-  }
+
 }
 
 @media (max-width: 768px) {
   .p-text{
-    position: absolute;
-    bottom: -10%;
     margin: auto;
     width: 80%;
-    left: 10%;
+
   }
-  footer{
-    position: absolute;
-    bottom: -150px;
-  }
+ 
 }
 
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .p-text{
-    position: relative;
-    bottom: -50px;
     width: 90%;
     left: 0;
   }
   footer{
-    position: relative;
-    bottom: -90px;
-    font-size: 0.8em;
+    margin-top: 180px;
+
   }
+
 
 }

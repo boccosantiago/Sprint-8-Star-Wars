@@ -3,6 +3,7 @@ import "../styles/Popup.css";
 import validation from "./validation";
 import { CgClose } from "react-icons/cg";
 import { BsCheck2Circle } from "react-icons/bs";
+import {RiCloseCircleLine} from "react-icons/ri"
 import { useNavigate } from "react-router-dom";
 
 function Popup(props) {
@@ -53,10 +54,6 @@ function Popup(props) {
   }
 
   
-
-  
-
-
   function handleLogin(e) {
     e.preventDefault();
     const correct = props.newUsers.filter(
@@ -149,7 +146,7 @@ function Popup(props) {
                   You are now logged in <BsCheck2Circle />{" "}
                 </p>
               ) : isLogged === false ? (
-                <p className="fail">You are not registered</p>
+                <p className="fail">You are not registered <RiCloseCircleLine/></p>
               ) : (
                 ""
               )}

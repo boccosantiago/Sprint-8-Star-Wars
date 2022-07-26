@@ -5,23 +5,15 @@ import "../styles/Header.css";
 import { Link } from "react-router-dom";
 
 export default function Header(props) {
-  // console.log('header props', props.newUsers )
+ console.log('header props', props.newUsers)
 
-/*   function getName(){
-    let firstName
-   if(firstName !== undefined){
-  const name = props.newUsers.filter(
+   const userName = props.newUsers.filter(
     (item) =>
-      item.email === props.loginValues.email &&
-      item.password === props.loginValues.password
-  ); 
-    return name[0].firstName
-}} */
+      item.email === props.userLogin.email &&
+      item.password === props.userLogin.password)
 
 
-  
-
-  // console.log('userName', userName.firstName)
+console.log('userName', userName) 
 
   return (
     <header>
@@ -43,9 +35,9 @@ export default function Header(props) {
             <FaYoutube className="link" />
           </a>
         </div>
-
+        <div className="logo-wrapper">
         <img className="logo" alt="logo" src={logo} />
-
+        </div>
         {!props.isLoggedIn ? (
           <div className="nav-log">
             <ul>
@@ -66,7 +58,7 @@ export default function Header(props) {
           <div className="nav-log">
             <ul>
               <li>
-                <p>Welcome</p>
+                 <p>Hi, {userName[0].firstName}</p> 
               </li>
               <li>{"//"}</li>
               <li>

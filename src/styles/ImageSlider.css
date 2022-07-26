@@ -1,11 +1,11 @@
 
 .slider {
     width: 100%;
-    height: 600px;
     display: flex;
     justify-content: center;
     position: relative;
     text-align: center;
+    top:7px;
   }
   
   .image {
@@ -46,8 +46,9 @@
 
   @media (max-width: 1200px) {
     .slider {
+      position: relative;
       width: 100%;
-      height: 500px;
+
     }
     .image {
       width: 80%;
@@ -56,23 +57,18 @@
   }
 
   @media (max-width: 768px) {
-    .slider {
-      width: 100%;
-      height: 400px;
+    .container-slider{
+      position: relative;
     }
     .image {
-      width: 100%;
+     width: 100%
     }
 
   }
 
   @media (max-width: 550px) {
-    .slider {
-      margin-top: 220px;
-      width: 100%;
-      height: 200px;
-    }
-    
+
+  
 
   }
 
