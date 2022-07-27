@@ -4,7 +4,6 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import "../styles/Films.css";
 
-
 function Films(props) {
   const [filmData, setFilmData] = useState([]);
   //console.log(props.url);
@@ -18,11 +17,8 @@ function Films(props) {
     });
   }, [props.url]);
 
-
-
   const last = props.url.split("/");
   const id = last[last.length - 2];
-
 
   return (
     <div className="films-card">

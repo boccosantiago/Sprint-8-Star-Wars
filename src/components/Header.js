@@ -5,15 +5,15 @@ import "../styles/Header.css";
 import { Link } from "react-router-dom";
 
 export default function Header(props) {
- console.log('header props', props.newUsers)
+  console.log("header props", props.newUsers);
 
-   const userName = props.newUsers.filter(
+  const userName = props.newUsers.filter(
     (item) =>
       item.email === props.userLogin.email &&
-      item.password === props.userLogin.password)
+      item.password === props.userLogin.password
+  );
 
-
-console.log('userName', userName) 
+  console.log("userName", userName);
 
   return (
     <header>
@@ -36,7 +36,7 @@ console.log('userName', userName)
           </a>
         </div>
         <div className="logo-wrapper">
-        <img className="logo" alt="logo" src={logo} />
+          <img className="logo" alt="logo" src={logo} />
         </div>
         {!props.isLoggedIn ? (
           <div className="nav-log">
@@ -58,11 +58,13 @@ console.log('userName', userName)
           <div className="nav-log">
             <ul>
               <li>
-                 <p>Hi, {userName[0].firstName}</p> 
+                <p>Hi, {userName[0].firstName}</p>
               </li>
               <li>{"//"}</li>
               <li>
-                <button onClick={()=>props.setUserLogin(false)}>SIGN OUT</button>
+                <button onClick={() => props.setUserLogin(false)}>
+                  SIGN OUT
+                </button>
               </li>
             </ul>
           </div>

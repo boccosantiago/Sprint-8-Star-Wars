@@ -15,7 +15,7 @@ function Pilots(props) {
 
   useEffect(() => {
     axios.get(props.url).then((res) => {
-     // console.log("data", res.data);
+      // console.log("data", res.data);
       setPilotData(res.data);
     });
   }, [props.url]);
@@ -25,8 +25,8 @@ function Pilots(props) {
   const last = props.url.split("/");
   const id = last[last.length - 2];
 
- //console.log("last", last);
- // console.log("id", id);
+  //console.log("last", last);
+  // console.log("id", id);
 
   return (
     <div className="pilots-cards">

@@ -26,12 +26,11 @@ function App() {
     } catch (e) {
       return initial;
     }
-  })
+  });
 
-  useEffect(()=>{
+  useEffect(() => {
     localStorage.setItem("userLogin", JSON.stringify(userLogin));
   }, [userLogin]);
-
 
   const [newUsers, setNewUsers] = useState(() => {
     const initial = [];
@@ -47,25 +46,25 @@ function App() {
     localStorage.setItem("registeredUsers", JSON.stringify(newUsers));
   }, [newUsers]);
 
-  function addNewUserLogin(){
+  function addNewUserLogin() {
     const newUserLogin = {
       email: loginValues.email,
-      password: loginValues.password
-    }
-    setUserLogin(newUserLogin)
+      password: loginValues.password,
+    };
+    setUserLogin(newUserLogin);
   }
 
-  const isLoggedIn = (userLogin) ? true : false
-  
-console.log('USERLOGIN', userLogin)
+  const isLoggedIn = userLogin ? true : false;
+
+  console.log("USERLOGIN", userLogin);
 
   return (
     <div className="main-container">
       <BrowserRouter>
         <Header
-          setPopupLogin={setPopupLogin} 
-          setPopupSignin={setPopupSignin} 
-          isLoggedIn={isLoggedIn} 
+          setPopupLogin={setPopupLogin}
+          setPopupSignin={setPopupSignin}
+          isLoggedIn={isLoggedIn}
           newUsers={newUsers}
           loginValues={loginValues}
           setLoginValues={setLoginValues}
@@ -85,19 +84,21 @@ console.log('USERLOGIN', userLogin)
           addNewUserLogin={addNewUserLogin}
         />
         <Routes>
-          <Route path='/' element={<Home />}/>
-          <Route path="unauthorized" element={<Unauthorized />}/>
-          <Route path="starships" 
-          element={ <Protected  isLoggedIn={isLoggedIn}>
-          {<Starships />}
-          </Protected>} 
+          <Route path="/" element={<Home />} />
+          <Route path="unauthorized" element={<Unauthorized />} />
+          <Route
+            path="starships"
+            element={
+              <Protected isLoggedIn={isLoggedIn}>{<Starships />}</Protected>
+            }
           />
-          <Route path="starships/:id" 
-          element= {<Protected  isLoggedIn={isLoggedIn}>
-          {<InfoStarship />}
-          </Protected>}
+          <Route
+            path="starships/:id"
+            element={
+              <Protected isLoggedIn={isLoggedIn}>{<InfoStarship />}</Protected>
+            }
           />
-          <Route path='*' element={<NotFound />}/>
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </div>

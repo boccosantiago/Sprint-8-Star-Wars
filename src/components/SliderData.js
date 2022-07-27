@@ -6,8 +6,6 @@ import img5 from "../img/5.jpg";
 import img6 from "../img/6.png";
 import img7 from "../img/7.jpg";
 
-
-
 export const SliderData = [
   {
     image: img1,
@@ -30,7 +28,4 @@ export const SliderData = [
   {
     image: img7,
   },
-  
 ];
-
-

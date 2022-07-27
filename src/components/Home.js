@@ -5,20 +5,20 @@ import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 import "../styles/Home.css";
 
 export default function Home() {
-  console.log('home render')
+  console.log("home render");
   return (
     <div className="home-container">
       <div className="home-main">
         <ImageSlider slides={SliderData} />
-        <div className='home-texts'>
-        <p className="p-text">
-          Star Wars, space opera film series (created by George Lucas) that
-          became one of the most successful and influential franchises in motion
-          picture history. Begun in the 1970s and ’80s and resuscitated at the
-          turn of the 21st century, the Star Wars films continually advanced the
-          field of motion picture special effects and developed into an
-          enormously lucrative merchandising industry.
-        </p>
+        <div className="home-texts">
+          <p className="p-text">
+            Star Wars, space opera film series (created by George Lucas) that
+            became one of the most successful and influential franchises in
+            motion picture history. Begun in the 1970s and ’80s and resuscitated
+            at the turn of the 21st century, the Star Wars films continually
+            advanced the field of motion picture special effects and developed
+            into an enormously lucrative merchandising industry.
+          </p>
         </div>
       </div>
       <footer>

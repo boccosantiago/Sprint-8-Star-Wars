@@ -1,105 +1,96 @@
-.info-main{
-    display: block;
-    text-align: center;
-    background-color: black; 
-    width: 50%;
-    margin: auto;
-    max-width: 700px;
-  }
-  
-  
+.info-main {
+  display: block;
+  text-align: center;
+  background-color: black;
+  width: 50%;
+  margin: auto;
+  max-width: 700px;
+}
 
-  .starship-img{
-    border-bottom: 2px solid rgb(255, 82, 82);
-    margin-top: 20px;
-    max-width:100%;
-    max-height:100%;
-  }
-  
-  .starship-div{
-    text-align: justify;
-    margin: 20px;
-    font-size: 2.5em;
-    font-weight: 500;
-  }
-  
+.starship-img {
+  border-bottom: 2px solid rgb(255, 82, 82);
+  margin-top: 20px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.starship-div {
+  text-align: justify;
+  margin: 20px;
+  font-size: 2.5em;
+  font-weight: 500;
+}
+
 /*   .info-text{
     width: 50%;
   } */
-  
-  .row{
-    display: flex;
-    font-size: 1.2em;
-    color: #999;
 
+.row {
+  display: flex;
+  font-size: 1.2em;
+  color: #999;
+}
+
+.column1 {
+  text-align: left;
+  font-weight: 500;
+  width: 60%;
+  margin-right: 10px;
+}
+
+.column2 {
+  text-align: left;
+  font-weight: 500;
+  float: right;
+}
+
+.name-div {
+  margin: 20px 0;
+  font-size: 2em;
+  text-align: left;
+  color: #999;
+}
+
+.model {
+  color: rgb(94, 94, 94);
+}
+
+.loading {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  padding: 50px;
+  font-size: 2em;
+}
+
+@media (max-width: 900px) {
+  .info-main {
+    width: 90%;
+    position: relative;
+    top: 50px;
   }
-  
-  .column1{
-    text-align:left;
-    font-weight: 500;
-    width: 60%;
-    margin-right: 10px;
+
+  .row {
+    display: block;
   }
-  
-  .column2{
-    text-align:left;
-    font-weight: 500;
-    float: right;
-    
-  }
-  
-  .name-div{
-    margin: 20px 0;
-    font-size: 2em;
+
+  .column1 {
     text-align: left;
-    color: #999;
+    font-weight: 500;
+    width: 90%;
+    margin-right: 0px;
   }
 
-  .model{
-    color: rgb(94, 94, 94);
+  .column2 {
+    width: 90%;
+    text-align: left;
+    float: none;
   }
-  
+}
 
-  
-  .loading{
-    width: 100%;
-    text-align: center;
-    margin: auto;
-    padding: 50px;
-    font-size: 2em; 
+@media (max-width: 550px) {
+  .starship-container {
+    position: relative;
+    top: 50px;
   }
-
-  @media (max-width: 900px) {
-
-    .info-main{
-      width: 90%;
-      position: relative;
-      top: 50px
-    }
-
-    .row{
-      display: block;
-    }
-
-    .column1{
-      text-align: left;
-      font-weight: 500;
-      width: 90%;
-      margin-right: 0px;
-    }
-    
-    .column2{
-      width: 90%;
-      text-align:left;
-      float:none;
-    }
-
-  }
-
-  @media (max-width: 550px) {
-    .starship-container{
-      position: relative;
-      top: 50px;
-    }
-
-  }
+}

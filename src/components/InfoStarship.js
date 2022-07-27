@@ -8,7 +8,6 @@ import Films from "./Films";
 import "../styles/Pilots.css";
 import "../styles/Films.css";
 
-
 export default function InfoStarship() {
   const [starship, setStarship] = useState(null);
   const params = useParams();
@@ -23,7 +22,7 @@ export default function InfoStarship() {
     uniqueStarship(params.id);
   }, [params.id]);
 
-  console.log(starship)
+  console.log(starship);
   return (
     <div>
       {starship !== null ? (
@@ -67,16 +66,18 @@ export default function InfoStarship() {
               <p>Passengers: {starship.passengers}</p>
             </div>
           </div>
-            {starship.pilots.length !== 0 && <div className="pilots-container">
+          {starship.pilots.length !== 0 && (
+            <div className="pilots-container">
               <h2>Related Pilots:</h2>
-            <div className="pilots">
-              {starship.pilots.map((url) => (
-                <Pilots key={url} url={url} />
-              ))}
+              <div className="pilots">
+                {starship.pilots.map((url) => (
+                  <Pilots key={url} url={url} />
+                ))}
+              </div>
             </div>
-          </div>}
+          )}
           <div className="films-container">
-              <h2>Films:</h2>
+            <h2>Films:</h2>
             <div className="films">
               {starship.films.map((url) => (
                 <Films key={url} url={url} />

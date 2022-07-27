@@ -38,22 +38,22 @@ export default function ImageSlider({ slides }) {
 
   return (
     <div className="container-slider">
-    <section className="slider">
-      <FaArrowLeft className="left-arrow" onClick={prevSlide} />
-      <FaArrowRight className="right-arrow" onClick={nextSlide} />
-      {SliderData.map((slide, index) => {
-        return (
-          <div
-            className={index === current ? "slide active" : "slide"}
-            key={index}
-          >
-            {index === current && (
-              <img className="image" src={slide.image} alt="swapi" />
-            )}
-          </div>
-        );
-      })}
-    </section>
+      <section className="slider">
+        <FaArrowLeft className="left-arrow" onClick={prevSlide} />
+        <FaArrowRight className="right-arrow" onClick={nextSlide} />
+        {SliderData.map((slide, index) => {
+          return (
+            <div
+              className={index === current ? "slide active" : "slide"}
+              key={index}
+            >
+              {index === current && (
+                <img className="image" src={slide.image} alt="swapi" />
+              )}
+            </div>
+          );
+        })}
+      </section>
     </div>
   );
 }
