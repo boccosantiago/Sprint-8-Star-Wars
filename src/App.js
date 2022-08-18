@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import "./styles/App.css";
 import Starships from "./components/Starships";
 import Header from "./components/Header";
@@ -56,11 +56,9 @@ function App() {
 
   const isLoggedIn = userLogin ? true : false;
 
-  console.log("USERLOGIN", userLogin);
-
   return (
     <div className="main-container">
-      <BrowserRouter>
+      <HashRouter>
         <Header
           setPopupLogin={setPopupLogin}
           setPopupSignin={setPopupSignin}
@@ -100,7 +98,7 @@ function App() {
           />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
