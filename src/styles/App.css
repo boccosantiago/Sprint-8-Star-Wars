@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 0;
+  padding: 0;
+  font-family: "Rajdhani", sans-serif;
+}
+
+html {
+  background-color: black;
+}
+
+.main-container {
+  background-color: #000;
+  color: rgb(86, 86, 86);
+  margin-top: 170px;
+}
+.starship-container {
+  background-color: black;
+  margin-top: 190px;
+}
+
+.ship-container {
+  width: 80%;
+  margin: 20px auto 20px auto;
+  padding: 15px 30px;
+  background-color: rgb(32, 32, 32);
+  transition: transform 0.2s;
+}
+
+.ship-container:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0px 0px 20px 5px rgb(255, 255, 59);
+}
+
+.name {
+  font-size: 1.5em;
+  font-weight: 600;
+  padding-bottom: 10px;
+  text-decoration: none;
+  color: rgb(167, 167, 167);
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+.name:hover {
+  color: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.model {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.buttons button {
+  width: 100px;
+  margin: 20px;
+  cursor: pointer;
+  background-color: rgb(71, 71, 71);
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: 600;
+  font-size: 0.9em;
+  color: white;
+}
+
+.buttons button:hover {
+  background-color: rgb(102, 102, 102);
+}
+
+.loading {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  padding: 50px;
+  font-size: 2em;
+}
+
+@media (max-width: 550px) {
+  .buttons button {
+    margin-top: 50px;
+  }
+}

@@ -1,0 +1,29 @@
+.films-container {
+  width: 100%;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.films-container h2 {
+  color: yellow;
+  font-weight: 300;
+}
+
+.films-card {
+  padding: 10px;
+  text-align: left;
+  font-size: 1em;
+  color: rgb(191, 191, 191);
+}
+.films {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.films p {
+  font-family: "Roboto", sans-serif;
+  color: rgb(180, 180, 180);
+}
+.films-img {
+  width: 100%;
+}

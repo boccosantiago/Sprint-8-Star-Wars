@@ -1,0 +1,60 @@
+.home-texts {
+  margin: 50px 0;
+}
+
+.p-text {
+  margin: 10px auto;
+  width: 50%;
+  text-align: justify;
+  font-weight: 600;
+  color: rgb(161, 161, 161);
+}
+
+footer {
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+  color: rgb(164, 164, 164);
+}
+
+.footer-links {
+  font-size: 2em;
+}
+
+.footer-text {
+  font-family: Roboto, sans-serif;
+  font-size: 0.9em;
+}
+
+.link {
+  color: rgb(164, 164, 164);
+  transition: all 0.2s ease-in-out;
+}
+
+.link:hover {
+  color: rgb(255, 255, 255);
+}
+
+@media (max-width: 900px) {
+  .p-text {
+    margin: auto;
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .p-text {
+    margin: auto;
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .p-text {
+    width: 90%;
+    left: 0;
+  }
+  footer {
+    margin-top: 180px;
+  }
+}
