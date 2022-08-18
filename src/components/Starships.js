@@ -9,7 +9,6 @@ export default function Starships() {
 
   useEffect(() => {
     axios.get(`https://swapi.dev/api/starships/?page=${load}`).then((res) => {
-      //console.log("data", res.data.results);
       setStarshipsData((prevStarshipsData) => [
         ...prevStarshipsData,
         ...res.data.results,
@@ -20,7 +19,6 @@ export default function Starships() {
   function loadMore() {
     setLoad((prevLoad) => prevLoad + 1);
   }
-  //console.log('starshipsData', starshipsData)
 
   const starshipsList = starshipsData.map((data, index) => {
     const last = data.url.split("/");

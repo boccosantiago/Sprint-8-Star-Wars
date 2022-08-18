@@ -8,9 +8,7 @@ import "../styles/Pilots.css";
 function Pilots(props) {
   const [pilotData, setPilotData] = useState([]);
 
-
   const params = useParams();
-  console.log(params);
 
   useEffect(() => {
     axios.get(props.url).then((res) => {
