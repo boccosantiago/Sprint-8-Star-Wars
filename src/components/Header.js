@@ -5,15 +5,13 @@ import "../styles/Header.css";
 import { Link } from "react-router-dom";
 
 export default function Header(props) {
-  console.log("header props", props.newUsers);
-
-  const userName = props.newUsers.filter(
-    (item) =>
-      item.email === props.userLogin.email &&
-      item.password === props.userLogin.password
-  );
-
-  console.log("userName", userName);
+  
+    const userName = props.newUsers.filter(
+      (item) =>
+        item.email === props.userLogin.email &&
+        item.password === props.userLogin.password
+    );
+  
 
   return (
     <header>

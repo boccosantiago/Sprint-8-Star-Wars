@@ -7,7 +7,6 @@ import { RiCloseCircleLine } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
 
 function Popup(props) {
-  //console.log("props popup", props);
   const [values, setValues] = useState({
     firstName: "",
     lastName: "",
@@ -59,13 +58,10 @@ function Popup(props) {
         item.password === props.loginValues.password
     );
     if (correct.length !== 0) {
-      console.log("OK");
-      //props.logIn();
       setIsLogged(true);
       props.addNewUserLogin();
       setTimeout(() => defaultValues(), 500);
     } else {
-      console.log("NOT OK");
       setIsLogged(false);
     }
   }
@@ -80,28 +76,13 @@ function Popup(props) {
 
   const navigate = useNavigate();
 
-  // console.log("isloggedin", props.isLoggedIn);
-
   function defaultValues() {
     setIsLogged(null);
     setRegister(false);
     props.setTriggerLogin(false);
     props.setTriggerSignin(false);
-    /* setValues({
-      firstName: "",
-      lastName: "",
-      email: "",
-      password: "",
-    });
-    setLoginValues({
-      email: "",
-      password: "",
-    }); */
-
     navigate("/");
   }
-
-  //console.log('loginValues', props.loginValues);
 
   if (props.triggerLogin) {
     return (

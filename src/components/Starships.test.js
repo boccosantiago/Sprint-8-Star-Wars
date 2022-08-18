@@ -6,9 +6,12 @@ import Starships from "./Starships";
 
 test('load must be in the component', () => {
     render(<Starships />);
-    const element = screen.getByText(/Load More/i);
+    const element = screen.getByText(/Load more/i);
     expect(element).toBeInTheDocument();
   });
+
+
+
 
 
   

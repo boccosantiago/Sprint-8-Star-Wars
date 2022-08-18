@@ -22,7 +22,6 @@ export default function InfoStarship() {
     uniqueStarship(params.id);
   }, [params.id]);
 
-  console.log(starship);
   return (
     <div>
       {starship !== null ? (
