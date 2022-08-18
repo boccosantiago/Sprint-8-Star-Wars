@@ -6,3 +6,4 @@ test('star wars must be in the paragraph', () => {
   const linkElement = screen.getByText(/star wars/i);
   expect(linkElement).toBeInTheDocument();
 });
+
