@@ -5,7 +5,8 @@ import "../styles/Header.css";
 import { Link } from "react-router-dom";
 
 export default function Header(props) {
- // console.log("header props", props.newUsers[0].firstName);
+
+
   
     const userName = props.newUsers.filter(
       (item) =>
@@ -13,8 +14,6 @@ export default function Header(props) {
         item.password === props.userLogin.password
     );
   
-
-  console.log("userName", props.newUsers);
 
   return (
     <header>

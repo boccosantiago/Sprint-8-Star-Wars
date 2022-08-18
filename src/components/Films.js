@@ -6,7 +6,6 @@ import "../styles/Films.css";
 
 function Films(props) {
   const [filmData, setFilmData] = useState([]);
-  //console.log(props.url);
 
   const params = useParams();
   console.log(params);

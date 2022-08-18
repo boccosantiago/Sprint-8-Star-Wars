@@ -5,7 +5,6 @@ import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 import "../styles/Home.css";
 
 export default function Home() {
-  console.log("home render");
   return (
     <div className="home-container">
       <div className="home-main">
