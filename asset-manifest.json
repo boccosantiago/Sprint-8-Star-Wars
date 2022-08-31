@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Sprint-8-Star-Wars/static/css/main.38e4d476.css",
+    "main.css": "/Sprint-8-Star-Wars/static/css/main.a426b25a.css",
     "main.js": "/Sprint-8-Star-Wars/static/js/main.129ecd23.js",
     "static/media/6.png": "/Sprint-8-Star-Wars/static/media/6.73baa734c182dcdaa355.png",
     "static/media/1.jpg": "/Sprint-8-Star-Wars/static/media/1.2aac8e026f4b945ceaac.jpg",
@@ -10,11 +10,11 @@
     "static/media/2.jpg": "/Sprint-8-Star-Wars/static/media/2.15b7ab55e1f21d619697.jpg",
     "static/media/4.jpg": "/Sprint-8-Star-Wars/static/media/4.6916032e3016df64dfa1.jpg",
     "index.html": "/Sprint-8-Star-Wars/index.html",
-    "main.38e4d476.css.map": "/Sprint-8-Star-Wars/static/css/main.38e4d476.css.map",
+    "main.a426b25a.css.map": "/Sprint-8-Star-Wars/static/css/main.a426b25a.css.map",
     "main.129ecd23.js.map": "/Sprint-8-Star-Wars/static/js/main.129ecd23.js.map"
   },
   "entrypoints": [
-    "static/css/main.38e4d476.css",
+    "static/css/main.a426b25a.css",
     "static/js/main.129ecd23.js"
   ]
 }
