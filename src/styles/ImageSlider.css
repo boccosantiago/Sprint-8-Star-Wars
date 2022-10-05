@@ -5,10 +5,12 @@
   position: relative;
   text-align: center;
   top: 7px;
+
 }
 
 .image {
-  width: 80%;
+  width: 100%;
+  height: 600px;
 }
 
 .right-arrow {
